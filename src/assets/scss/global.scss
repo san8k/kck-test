@@ -1,0 +1,19 @@
+body {
+  background-color: $colorMainBackground;
+}
+
+#app {
+  padding: 0 16px;
+  margin-top: 50px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include mq(374) {
+    padding: 0 5px;
+  }
+}
+
+input, textarea {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}

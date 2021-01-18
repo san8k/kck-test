@@ -1,0 +1,54 @@
+.main-radio {
+  display: flex;
+  align-items: center;
+  color: $colorBlack;
+  cursor: pointer;
+  padding: 8px 0;
+  flex: 1 0 50%;
+
+  &--disabled {
+    color: $colorGrayText;
+    cursor: default;
+
+    .main-radio__circle {
+      background-color: $colorLightGray;
+      border-color: $colorLightGray;
+    }
+  }
+
+  &:hover {
+    color: $colorLightBlue;
+
+    .main-radio__circle {
+      border-color: $colorLightBlue;
+    }
+  }
+
+  &--active {
+    .main-radio__circle {
+      border-color: $colorLightBlue;
+      &:after {
+        background-color: $colorLightBlue;
+      }
+    }
+  }
+
+  &__circle {
+    border: 1px solid $colorLightGray2;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+
+    &:after {
+      content: " ";
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+    }
+  }
+}

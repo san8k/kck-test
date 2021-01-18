@@ -1,0 +1,30 @@
+.main-button {
+  padding: 0 45px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-radius: 28px;
+  color: $colorWhite;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $colorBlue;
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &_hover {
+    background-color: $colorDarkBlue;
+  }
+
+  &:active,
+  &_active {
+    background-color: $colorDarkestBlue;
+  }
+
+  &_disabled,
+  &.disabled {
+    background-color: $colorLightGray !important;
+    cursor: default;
+    color: $colorGrayText;
+  }
+}

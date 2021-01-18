@@ -1,0 +1,30 @@
+.delivery-form {
+  background-color: $colorWhite;
+  padding: 34px;
+
+  @include mq(767) {
+    padding: 24px 16px 34px;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include mq(767) {
+      flex-wrap: wrap;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &--mb0 {
+      margin-bottom: 0;
+    }
+
+    &--mb40 {
+      margin-bottom: 40px;
+    }
+  }
+}

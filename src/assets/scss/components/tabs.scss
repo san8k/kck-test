@@ -1,0 +1,55 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tab {
+  color: $colorMainText;
+  background: $colorLightGray;
+  cursor: pointer;
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+
+  &:hover {
+    color: $colorBlue;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    left: calc(100% - 4px);
+    border-style: solid;
+    border-color: transparent transparent transparent $colorLightGray;
+    border-width: 64px 0 0 40px;
+    border-radius: 10px 0 0 0;
+    width: 0;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    left: calc(100% + 16px);
+    top: 1px;
+    border-radius: 0 10px 0 0;
+    height: 120%;
+    width: 4px;
+    background-color: transparent;
+    z-index: 0;
+    transform: rotate(-32deg);
+    box-shadow: 2px -2px 1px 0 rgba($colorBlack, 0.08);
+  }
+
+  &--is-active {
+    z-index: 10;
+    background-color: $colorWhite;
+    color: $colorBlue;
+    &::after {
+      border-color: transparent transparent transparent $colorWhite;
+    }
+  }
+}
